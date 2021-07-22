@@ -8,17 +8,16 @@ var secondArray = ['1', '2', '3', '4', '5'];
 console.log('Il primo array ha: ' + firstArray.length + ' elementi');
 console.log('Il secondo array ha: ' + secondArray.length + ' elementi');
 
-if (firstArray.length > secondArray.length) {
-	do {
-		secondArray.push(' ');
-	} while (firstArray.length > secondArray.length);
-} else if (secondArray.length > firstArray.length) {
-	do {
-		firstArray.push(' ');
-	} while (secondArray.length > firstArray.length);
-} else {
-	console.log('Gli array hanno entrambi ' + firstArray.length + ' elementi al loro interno.');
+while (firstArray.length > secondArray.length) {
+	secondArray.push(' ');
+	//console.log('Il secondo array ha adesso: ' + secondArray.length + ' elementi');
 }
 
-console.log('Il primo array ha adesso: ' + firstArray.length + ' elementi');
-console.log('Il secondo array ha adesso: ' + secondArray.length + ' elementi');
+while (secondArray.length > firstArray.length) {
+	firstArray.push(' ');
+	//console.log('Il primo array ha adesso: ' + firstArray.length + ' elementi');
+}
+
+if (firstArray.length == secondArray.length) {
+	console.log('Gli array hanno entrambi ' + firstArray.length + ' elementi al loro interno.');
+}
